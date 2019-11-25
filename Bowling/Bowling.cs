@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Linq;
 
 
-public class Bowling
+public static class Bowling
 {
-    internal static int Score(string frames)
+    public static int GetScore(string game)
     {
         throw new NotImplementedException();
     }

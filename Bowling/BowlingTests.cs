@@ -3,14 +3,12 @@ using Xunit;
 
     public class BowlingTests
     {
-    [Fact]
-    public void One_Miss_is_Zero_Points()
-    {
-        var rolls = "-";
+        [Fact]
+        public void not_a_pin_hit()
+        {
+            var game = "-- -- -- -- -- -- -- -- -- --";
 
-        var score = 0;
-
-        Assert.Equal(score, Bowling.Score(rolls));
-    }
+            Assert.Equal(0, Bowling.GetScore(game));
+        }
 }
 
