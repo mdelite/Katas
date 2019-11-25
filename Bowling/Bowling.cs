@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
 
-
-public static class Bowling
+public class Bowling
 {
-    public static int GetScore(string game)
+    private List<int> frames;
+    public Bowling(string game)
     {
         throw new NotImplementedException();
     }
+
+    public int Score { get; }
 }
 

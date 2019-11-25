@@ -7,8 +7,11 @@ using Xunit;
         public void not_a_pin_hit()
         {
             var game = "-- -- -- -- -- -- -- -- -- --";
+            var sut = new Bowling(game);
 
-            Assert.Equal(0, Bowling.GetScore(game));
+            int expected = 0;
+
+            Assert.Equal(expected, sut.Score);
         }
 }
 
