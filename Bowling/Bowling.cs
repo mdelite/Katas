@@ -10,6 +10,12 @@ public class Bowling
         throw new NotImplementedException();
     }
 
-    public int Score { get; }
+    public int Score
+    {
+        get
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
 
