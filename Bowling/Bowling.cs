@@ -4,18 +4,45 @@ using System.Collections.Generic;
 
 public class Bowling
 {
-    private List<int> frames;
+    private string _rolls;
     public Bowling(string game)
     {
-        throw new NotImplementedException();
+        _rolls = game.Replace(" ", "");
     }
 
     public int Score
     {
         get
         {
-            throw new NotImplementedException();
+            var p = Enumerable.Range(0, _rolls.Count())
+                .Select(x => RollValue(x) + GetBonus(x))
+                .Sum();
+
+            return p;
         }
+    }
+
+    private int RollValue(int roll)
+    {
+        var score = 0;
+
+        int.TryParse(_rolls[roll].ToString(), out score);
+        
+        return score;
+    }
+
+    private int GetBonus(int roll)
+    {
+        var bonus = 0;
+
+        return bonus;
+    }
+
+
+
+    private int StrikesCount()
+    {
+        return _rolls.Count(x => x == 'X');
     }
 }
 

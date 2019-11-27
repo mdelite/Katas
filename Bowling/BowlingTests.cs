@@ -1,17 +1,26 @@
 using System;
 using Xunit;
 
-    public class BowlingTests
+public class BowlingTests
+{
+    [Fact]
+    public void not_a_pin_hit()
     {
-        [Fact]
-        public void not_a_pin_hit()
-        {
-            var game = "-- -- -- -- -- -- -- -- -- --";
-            var sut = new Bowling(game);
+        var game = "-- -- -- -- -- -- -- -- -- --";
+        var sut = new Bowling(game);
 
-            int expected = 0;
+        int expected = 0;
 
-            Assert.Equal(expected, sut.Score);
-        }
+        Assert.Equal(expected, sut.Score);
+    }
+
+    [Fact]
+    public void TestName()
+    {
+        var game = "9- 9- 9- 9- 9- 9- 9- 9- 9- 9-";
+        var sut = new Bowling(game);
+
+        Assert.Equal(90, sut.Score);
+    }
 }
 
